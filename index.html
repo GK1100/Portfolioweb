@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Core - Generative AI & Machine Learning Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Neural Network Background -->
+    <div class="neural-background">
+        <canvas id="neuralCanvas"></canvas>
+        <div class="neural-overlay"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="ai-loader">
+                <div class="ai-core">
+                    <div class="core-ring"></div>
+                    <div class="core-ring"></div>
+                    <div class="core-ring"></div>
+                </div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-title">Initializing AI Core</span>
+                <span class="loading-subtitle">Loading Neural Networks...</span>
+                <div class="loading-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="progress-text">0%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Command Bar Navigation -->
+    <nav class="command-bar">
+        <div class="command-container">
+            <div class="command-logo">
+                <div class="ai-icon">
+                    <div class="wse3-chip">
+                        <div class="chip-core"></div>
+                        <div class="chip-connections">
+                            <div class="connection-line"></div>
+                            <div class="connection-line"></div>
+                            <div class="connection-line"></div>
+                            <div class="connection-line"></div>
+                        </div>
+                        <div class="chip-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                </div>
+                <span class="logo-text">My Portfolio</span>
+            </div>
+            
+            <div class="command-menu" id="commandMenu">
+                <div class="command-item" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="command-item" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </div>
+                <div class="command-item" data-section="projects">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Projects</span>
+                </div>
+                <div class="command-item" data-section="skills">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Skills</span>
+                </div>
+                <div class="command-item" data-section="publications">
+                    <i class="fas fa-book"></i>
+                    <span>Research</span>
+                </div>
+                <div class="command-item" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </div>
+            </div>
+
+            <div class="command-toggle" id="commandToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section class="content-section active" id="home-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="welcome-container">
+                        <div class="hello-text">
+                            <h1 class="hello-title">
+                                <span class="hello-letter" data-letter="H">H</span>
+                                <span class="hello-letter" data-letter="E">E</span>
+                                <span class="hello-letter" data-letter="L">L</span>
+                                <span class="hello-letter" data-letter="L">L</span>
+                                <span class="hello-letter" data-letter="O">O</span>
+                                <span class="hello-letter" data-letter=".">.</span>
+                                <span class="hello-letter" data-letter="!">!</span>
+                                <span class="hello-letter" data-letter="!">!</span>
+                            </h1>
+                        </div>
+                        
+                        <div class="tech-grid">
+                            <div class="tech-line"></div>
+                            <div class="tech-line"></div>
+                            <div class="tech-line"></div>
+                            <div class="tech-line"></div>
+                            <div class="tech-line"></div>
+                            <div class="tech-line"></div>
+                        </div>
+                        
+                        <div class="ai-quote">
+                            <p class="quote-text" id="quoteText">"The future of AI is not about replacing humans, but about amplifying human potential."</p>
+                            <span class="quote-author" id="quoteAuthor">- AI Vision</span>
+                        </div>
+                        
+                        <div class="data-stream" id="dataStream">
+                            <div class="data-bit">1</div>
+                            <div class="data-bit">0</div>
+                            <div class="data-bit">1</div>
+                            <div class="data-bit">0</div>
+                            <div class="data-bit">1</div>
+                            <div class="data-bit">1</div>
+                            <div class="data-bit">0</div>
+                            <div class="data-bit">1</div>
+                            <div class="hello-overlay">HELLO</div>
+                        </div>
+                        
+                        <div class="welcome-particles">
+                            <div class="particle-ring">
+                                <div class="particle" style="--i:0"></div>
+                                <div class="particle" style="--i:1"></div>
+                                <div class="particle" style="--i:2"></div>
+                                <div class="particle" style="--i:3"></div>
+                                <div class="particle" style="--i:4"></div>
+                                <div class="particle" style="--i:5"></div>
+                                <div class="particle" style="--i:6"></div>
+                                <div class="particle" style="--i:7"></div>
+                                <div class="particle" style="--i:8"></div>
+                                <div class="particle" style="--i:9"></div>
+                                <div class="particle" style="--i:10"></div>
+                                <div class="particle" style="--i:11"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="welcome-glow">
+                            <div class="glow-orb"></div>
+                            <div class="glow-orb"></div>
+                            <div class="glow-orb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="content-section" id="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">My Profile</h2>
+                    <div class="section-subtitle">Generative AI Specialist & Machine Learning Engineer</div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="generative-text" id="generativeText">
+                            <span class="text-cursor">|</span>
+                        </div>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">University</span>
+                                    <span class="detail-value">Dayananda Sagar University</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Education</span>
+                                    <span class="detail-value">B.Tech (CSE - AI & ML)</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Research</span>
+                                    <span class="detail-value">Published AI Researcher</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visualization">
+                        <div class="ai-brain">
+                            <div class="brain-core">
+                                <div class="core-pulse"></div>
+                                <div class="core-pulse"></div>
+                                <div class="core-pulse"></div>
+                            </div>
+                            <div class="brain-connections">
+                                <div class="connection-line"></div>
+                                <div class="connection-line"></div>
+                                <div class="connection-line"></div>
+                                <div class="connection-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="content-section" id="projects-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">AI Model Pipeline</h2>
+                    <div class="section-subtitle">Advanced AI Systems & Research Projects</div>
+                </div>
+                
+
+
+                    <div class="pipeline-node" data-project="bone-fracture">
+                        <div class="node-header">
+                            <div class="node-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <div class="node-status">
+                                <div class="status-indicator active"></div>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-content">
+                            <h3 class="node-title">Bone Fracture Detection</h3>
+                            <p class="node-description">
+                                Multi-model deep learning system for automated bone fracture detection.
+                            </p>
+                            
+                            <div class="node-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">99.51%</span>
+                                    <span class="metric-label">Accuracy</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">Multi-Model</span>
+                                    <span class="metric-label">Architecture</span>
+                                </div>
+                            </div>
+                            
+                            <div class="node-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-connections">
+                            <div class="connection-point"></div>
+                            <div class="connection-point"></div>
+                        </div>
+                        
+                        <div class="github-link">
+                            <a href="https://github.com/GK1100/bone-fracture-detection" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-node" data-project="dsu-system">
+                        <div class="node-header">
+                            <div class="node-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="node-status">
+                                <div class="status-indicator active"></div>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-content">
+                            <h3 class="node-title">DSU Information Retrieval</h3>
+                            <p class="node-description">
+                                Advanced information retrieval system using AI and NLP techniques.
+                            </p>
+                            
+                            <div class="node-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">High</span>
+                                    <span class="metric-label">Precision</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">NLP</span>
+                                    <span class="metric-label">Powered</span>
+                                </div>
+                            </div>
+                            
+                            <div class="node-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Information Retrieval</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-connections">
+                            <div class="connection-point"></div>
+                            <div class="connection-point"></div>
+                        </div>
+                        
+                        <div class="github-link">
+                            <a href="https://github.com/GK1100/dsu-retrieval" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-node" data-project="financial-agent">
+                        <div class="node-header">
+                            <div class="node-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="node-status">
+                                <div class="status-indicator active"></div>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-content">
+                            <h3 class="node-title">Financial Agent</h3>
+                            <p class="node-description">
+                                Intelligent financial analysis and decision-making agent.
+                            </p>
+                            
+                            <div class="node-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">AI</span>
+                                    <span class="metric-label">Powered</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">Real-time</span>
+                                    <span class="metric-label">Analysis</span>
+                                </div>
+                            </div>
+                            
+                            <div class="node-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Phidata</span>
+                                <span class="tech-tag">Groq API</span>
+                            </div>
+                        </div>
+                        
+                        <div class="node-connections">
+                            <div class="connection-point"></div>
+                            <div class="connection-point"></div>
+                        </div>
+                        
+                        <div class="github-link">
+                            <a href="https://github.com/GK1100/financial-agent" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="content-section" id="skills-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Knowledge Modules</h2>
+                    <div class="section-subtitle">AI Competency Network & Technical Expertise</div>
+                </div>
+                
+                <div class="skills-network">
+                    <div class="skill-category" data-category="ai-ml">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Core AI/ML</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Agentic AI</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Machine Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Deep Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Gen AI</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="programming">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming & Frameworks</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TensorFlow</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Keras</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">LangChain</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">OpenAI API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="tools">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Tools & Libraries</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">pandas</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">scikit-learn</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">OpenCV</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">FFMPEG</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="content-section" id="publications-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Research Outputs</h2>
+                    <div class="section-subtitle">Knowledge Artifacts & Scientific Contributions</div>
+                </div>
+                
+                <div class="publications-grid">
+                    <div class="publication-card">
+                        <div class="publication-header">
+                            <div class="publication-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="publication-status">
+                                <div class="status-indicator published"></div>
+                                <span>Published</span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-content">
+                            <h3 class="publication-title">
+                                Machine Learning and Artificial Intelligence for Predictive Modeling in Antimicrobial Resistance Data Sets, Challenges, and Future Directions
+                            </h3>
+                            
+                            <div class="publication-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">Conference</span>
+                                    <span class="meta-value">ICSSES 2025</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">DOI</span>
+                                    <span class="meta-value">10.1109/ICSSES64899.2025.11009316</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">Year</span>
+                                    <span class="meta-value">2025</span>
+                                </div>
+                            </div>
+                            
+                            <div class="publication-abstract">
+                                <p>Research on predictive modeling in antimicrobial resistance using advanced machine learning and artificial intelligence techniques.</p>
+                            </div>
+                            
+                            <div class="publication-tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Predictive Modeling</span>
+                                <span class="tag">Antimicrobial Resistance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-actions">
+                            <a href="#" class="action-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Download PDF</span>
+                            </a>
+                            <a href="#" class="action-btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Paper</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section" id="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Connection Endpoints</h2>
+                    <div class="section-subtitle">Establish Neural Network Communication</div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">gaurav10.kumavat@gmail.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 9140228936</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">gaurav-kumavat-gk1100</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">GK1100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <div class="btn-pulse"></div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="ai-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <span>AI Core v2.0</span>
+                <span>•</span>
+                <span>Generative AI Specialist</span>
+                <span>•</span>
+                <span>Machine Learning Engineer</span>
+            </div>
+            <div class="footer-status">
+                <div class="status-indicator"></div>
+                <span>AI Core Online</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
