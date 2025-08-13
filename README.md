@@ -1,6 +1,6 @@
 # Portfolioweb 
 
-Link : 
+Link : https://gk1100.github.io/Portfolioweb/
 
 An interactive, visually engaging personal portfolio website showcasing expertise in **Generative AI**, **Machine Learning**, and related technologies.  
 This site features a futuristic neural network interface, animated components, and a smooth single-page navigation system to highlight projects, skills, and research.
