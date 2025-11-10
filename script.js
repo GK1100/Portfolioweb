@@ -553,6 +553,9 @@ class AICorePortfolio {
                             setTimeout(() => {
                                 loadingScreen.style.display = 'none';
                                 this.isLoading = false;
+
+                                // Navigate to home section
+                                this.navigateToSection('about');
                             }, 500);
                         }
                     }, 500);
